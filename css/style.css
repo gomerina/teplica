@@ -849,6 +849,14 @@ a.card-item__title {
   margin: 33px 0 0 0;
 }
 
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 23px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #6FCF97;
+}
+
 .page-navigation {
   font-size: 24px;
   margin: 25px 0 0 0;
@@ -1878,16 +1886,6 @@ h4 {
 
   .products.swiper-container {
     padding: 13px 0 0 0;
-  }
-
-  .product {
-    margin: 0 0 25px 0;
-  }
-  .product:last-child {
-    margin: 0 0 25px 0;
-  }
-  .product:nth-child(3n+3) {
-    margin: 0 0 25px 0;
   }
 
   .header__menu {
