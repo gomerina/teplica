@@ -65,7 +65,7 @@
 				<p class="cards-section__descr">Купить теплицу мини шириной 2 или 2,4 метра. Отличная теплица для выращивания зелени. Теплица подойдет если у вас ограничено пространство на участке или у вас дом в городской черте. Мини теплица ничем не уступает полноразмерным теплицам, разве что выигрывает своей компактностью.</p>
 				<div class="products swiper-container" data-mobile="false" id="slider-1">
 					<div class="swiper-wrapper">
-						<div class="product swiper-slide" data-start="450" data-sale="30">
+						<div class="product swiper-slide" data-start="14000" data-sale="30">
 							<div class="product__inner">
 								<a href="#" class="p-img-wrap card__img">
 									<img src="img/card-img.png" alt="">
@@ -99,7 +99,7 @@
 										</div>
 										<div class="p-addtocart">
 											<div class="old-o-cost"><span class="old-pc-amount">585</span> <span class="rub">руб</span></div>
-											<div class="p-cost"><span class="pc-amount">450</span> <span class="rub">руб</span></div>
+											<div class="p-cost"><span class="pc-amount">14 000</span> <span class="rub">руб</span></div>
 										</div> <br>
 									</div>	
 									<div class="card-footer">
@@ -354,7 +354,8 @@
 					<div class="swiper-pagination"></div>
 				</div>
 			</div>	
-		</main>
+		</div>
+	</main>
 	<footer class="footer"> <!-- ПОДВАЛ -->
 		<div class="container">	
 			<div class="footer-inner">
@@ -383,76 +384,76 @@
 			</form>
 		</div>
 	</div>
-		<div class="overlay"></div>
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-		<script src="js/swiper.min.js"></script>
-		<script src="js/inputmask.min.js"></script>
-		<script src="js/main.js"></script>
-		<script>
-			const slider = document.getElementById('slider-1');
-			const slider2 = document.getElementById('slider-2');
-			let mobileSwiper;
-			let mobileSwiper2;
-			function mobSwiper() {
-				if (window.innerWidth <= 769 && slider.dataset.mobile == 'false'){
-					mobileSwiper = new Swiper(slider, {
-						slidesPerGroup: 1,
-						loop: false,
-						spaceBetween: 34,
-						initialSlide: 0,
-						pagination: {
-							el: ".swiper-pagination",
-							clickable: true,
+	<div class="overlay"></div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/inputmask.min.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		const slider = document.getElementById('slider-1');
+		const slider2 = document.getElementById('slider-2');
+		let mobileSwiper;
+		let mobileSwiper2;
+		function mobSwiper() {
+			if (window.innerWidth <= 769 && slider.dataset.mobile == 'false'){
+				mobileSwiper = new Swiper(slider, {
+					slidesPerGroup: 1,
+					loop: false,
+					spaceBetween: 34,
+					initialSlide: 0,
+					pagination: {
+						el: ".swiper-pagination",
+						clickable: true,
+					},
+					breakpoints: {
+						320: {
+							slidesPerView: 1.17,
 						},
-						breakpoints: {
-							320: {
-								slidesPerView: 1.17,
-							},
-							649: {
-								slidesPerView: 2.5,
-							},
-							650: {
-								slidesPerView: 2.5,
-							},
+						649: {
+							slidesPerView: 2.5,
 						},
-					});
-					mobileSwiper2 = new Swiper(slider2, {
-						slidesPerGroup: 1,
-						loop: false,
-						spaceBetween: 34,
-						initialSlide: 0,
-						pagination: {
-							el: ".swiper-pagination",
-							clickable: true,
+						650: {
+							slidesPerView: 2.5,
 						},
-						breakpoints: {
-							320: {
-								slidesPerView: 1.17,
-							},
-							649: {
-								slidesPerView: 2.5,
-							},
-							650: {
-								slidesPerView: 2.5,
-							},
+					},
+				});
+				mobileSwiper2 = new Swiper(slider2, {
+					slidesPerGroup: 1,
+					loop: false,
+					spaceBetween: 34,
+					initialSlide: 0,
+					pagination: {
+						el: ".swiper-pagination",
+						clickable: true,
+					},
+					breakpoints: {
+						320: {
+							slidesPerView: 1.17,
 						},
-					});
-					slider.dataset.mobile = 'true';
-					slider2.dataset.mobile = 'true';
-				};
-				if (window.innerWidth > 769) {
-					slider.dataset.mobile = 'false';
-					slider2.dataset.mobile = 'false';
-					if (slider.classList.contains('swiper-container-initialized')){
-						mobileSwiper.destroy();
-						mobileSwiper2.destroy();
-					}
-				}
+						649: {
+							slidesPerView: 2.5,
+						},
+						650: {
+							slidesPerView: 2.5,
+						},
+					},
+				});
+				slider.dataset.mobile = 'true';
+				slider2.dataset.mobile = 'true';
 			};
+			if (window.innerWidth > 769) {
+				slider.dataset.mobile = 'false';
+				slider2.dataset.mobile = 'false';
+				if (slider.classList.contains('swiper-container-initialized')){
+					mobileSwiper.destroy();
+					mobileSwiper2.destroy();
+				}
+			}
+		};
+		mobSwiper();
+		window.addEventListener("resize", function() {
 			mobSwiper();
-			window.addEventListener("resize", function() {
-				mobSwiper();
-			})
-		</script>
-	</body>
-	</html>
+		})
+	</script>
+</body>
+</html>
